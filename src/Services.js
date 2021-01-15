@@ -24,7 +24,7 @@ export const Services = () => {
     <table>
       <caption> Listado </caption>
       <thead>
-        <tr></tr>
+        <tr> </tr>
       </thead>
     </table>
   )
