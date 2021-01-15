@@ -1,27 +1,32 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { recordsHelper } from './helpers/recordsHelper';
 
 export const Services = () => {
+  
+  const [item, setItem] = useState([]);
+  
   useEffect(() => {
     getrecordsHelper();
   }, []);
   const getrecordsHelper = async () => {
     let jsonValue = {
-      numRecordsReturned: 9,
-      skippedRecords: 0,
-      maxPages: 0,
-      totalRecordsMatched: 0
+      skipRecords: 0,
+      maxRecords: 100
     };
     const response = await recordsHelper(
       JSON.stringify(jsonValue),
     );
-    console.log(response)
+    setItem(response.data.message.records)
+    console.log(item)
   }
   return (
-    <>
-      <h1>Hola soy servicios</h1>
-    </>
+    <table>
+      <caption> Listado </caption>
+      <thead>
+        <tr></tr>
+      </thead>
+    </table>
   )
 }
 
