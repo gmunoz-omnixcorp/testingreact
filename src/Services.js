@@ -14,9 +14,7 @@ export const Services = () => {
       totalRecordsMatched: 0
     };
     const response = await recordsHelper(
-      '',
       JSON.stringify(jsonValue),
-      'all'
     );
     console.log(response)
   }
