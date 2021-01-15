@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Services } from './components/TableServices/Services';
 import './index.css';
-import { Services } from './Services';
 
 ReactDOM.render(
   <React.StrictMode>

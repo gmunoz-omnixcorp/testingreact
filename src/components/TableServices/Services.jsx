@@ -1,7 +1,7 @@
 
 import React  from 'react';
-import { TableIndex } from './components/TableServices';
-import { useFetch } from './Hooks/useFetch';
+import { TableIndex } from '.';
+import { useFetch } from '../../Hooks/useFetch';
 
 export const Services = () => {
   
