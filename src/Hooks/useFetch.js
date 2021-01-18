@@ -16,7 +16,7 @@ export const useFetch = ( url = '', json = {} ) => {
             data: null,
             loading: true
         });
-        let result = axios.post(url, json, {
+        let result = axios.post('https://adretaildev-olm.omnixsystem.com' + url, json, {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
