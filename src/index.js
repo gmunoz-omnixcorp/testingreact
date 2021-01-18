@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Services } from './components/TableServices/Services';
 import './index.css';
-import { AppRouter } from './AppRouter';
-import { RouterService } from './components/TableRouter/RouterService';
+import { AppRouter } from './App';
 ReactDOM.render(
   <React.StrictMode>
-    <RouterService />
+    <AppRouter />
   </React.StrictMode>,
   document.getElementById('root')
 );
