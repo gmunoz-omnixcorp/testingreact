@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { TableService } from './TableService';
+import { TbodyService } from './TbodyService';
 
 export const TableIndex = (props) => {
 
     const [item, setitem] = useState(props.data);
     return (
-        <div>
+        <div className="table-responsive content-table">
             <table className="table table-striped table-bordered ">
               <thead>
                 <tr>
@@ -19,7 +19,7 @@ export const TableIndex = (props) => {
               <tbody>
                 {item.map((resp, index) => {
                   return (
-                    <TableService key={index} data={resp} />
+                    <TbodyService key={index} data={resp} />
                   )
                 })}
               </tbody>

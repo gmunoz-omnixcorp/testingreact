@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const TableService = (props) => {
+export const TbodyService = (props) => {
     return (
         <tr>
             <td>{props.data.id}</td>

@@ -3,7 +3,6 @@ import { TableRouter } from './TableRouter';
 
 export const RouterIndex = (props) => {
     const [item, setitem] = useState(props.data);
-    console.log(item)
     return (
         <div>
             <table className="table table-striped table-bordered ">

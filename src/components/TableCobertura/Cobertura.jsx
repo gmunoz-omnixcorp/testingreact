@@ -1,9 +1,9 @@
 
 import React from 'react';
-import { TableIndex } from './index';
+import { TableIndex } from './CoberturaIndex';
 import { useFetch } from '../../Hooks/useFetch';
 
-export const Services = () => {
+export const Cobertura = () => {
 
   let jsonValue = {
     skipRecords: 0,
