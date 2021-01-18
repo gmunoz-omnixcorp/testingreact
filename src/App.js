@@ -1,7 +1,6 @@
 import {React} from 'react'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { RouterIndex } from './components/TableRouter/RouterIndex';
-import { RouterService } from './components/TableRouter/RouterService';
+import { RouterS } from './components/TableRouter/RouterS';
 import { Services } from './components/TableServices/Services';
 import { NavBar } from './shared/navBar';
 
@@ -11,7 +10,7 @@ export const AppRouter = () => {
             <NavBar />
             <Switch>
                 <Route path='/servicios' component={Services}></Route>
-                <Route path='/rutas' component={RouterService}></Route>
+                <Route path='/rutas' component={RouterS}></Route>
             </Switch>
         </Router>
     )

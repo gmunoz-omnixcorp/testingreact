@@ -1,7 +1,7 @@
 import React from 'react'
 import { useFetch } from '../../Hooks/useFetch';
 import { RouterIndex } from './RouterIndex';
-export const RouterService = () => {
+export const RouterS = () => {
     let jsonValue = {
         skipRecords: 0,
         maxRecords: 100
