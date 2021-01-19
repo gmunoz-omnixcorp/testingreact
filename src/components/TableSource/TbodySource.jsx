@@ -1,11 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { DaysHelper } from '../../helpers/DaysHelper';
 
 export const TbodySource = (props) => {
-    console.log(props.data)
     return (
         <tr>
-            <td>{props.data.id}</td>
+            <td><Link to={'fuentes/' + props.data.id}>{props.data.id}</Link></td>
             <td>{props.data.name}</td>
             <td>
                 {
