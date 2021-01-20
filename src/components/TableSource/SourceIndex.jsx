@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { TheadGeneral } from '../TheadGeneral/TheadGeneral';
 import { TbodySource } from './TbodySource';
+import { TableBody, TableContainer, Table } from '@material-ui/core';
 
 export const SourceIndex = (props) => {
   const thead = [
@@ -15,17 +16,17 @@ export const SourceIndex = (props) => {
     'Tiempo de Trabajo'];
     const [item, setitem] = useState(props.data);
     return (
-        <div className="table-responsive content-table">
-            <table className="table table-striped table-bordered ">
+        <TableContainer>
+            <Table className="table table-striped table-bordered ">
             <TheadGeneral thead={thead} />
-              <tbody>
+              <TableBody>
                 {item.map((resp, index) => {
                   return (
                     <TbodySource key={index} data={resp} />
                   )
                 })}
-              </tbody>
-            </table>
-        </div>
+              </TableBody>
+            </Table>
+        </TableContainer>
     )
 }

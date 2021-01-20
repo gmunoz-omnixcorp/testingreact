@@ -1,6 +1,8 @@
 import React from 'react'
 import { useFetch } from '../../Hooks/useFetch';
 import { CardSource } from './CardSource';
+import { Container, Paper, Grid } from '@material-ui/core';
+import { Alert } from '@material-ui/lab';
 
 export const EspesificSource = (props) => {
     const id = props.match.params.id;
@@ -13,25 +15,25 @@ export const EspesificSource = (props) => {
     };
     const { loading, data } = useFetch('/v3/sources/all', jsonValue);
     return (
-        <div className="container">
-            <div className="row my-3">
-                <div className="col-lg-12">
+        <Paper>
+            <Container>
+                <Grid item lg={12}>
                     {
                         loading
                             ?
                             (
-                                <div className="alert alert-info text-center" >
-                                    Cargando...
-                                </div>
+                                <>
+                                    <Alert severity="info">Cargando...</Alert>
+                                    <br />
+                                </>
                             )
                             :
                             (
                                 <CardSource data={data[0]} />
                             )
                     }
-                </div>
-            </div>
-
-        </div>
+                </Grid>
+            </Container>
+        </Paper>
     )
 }

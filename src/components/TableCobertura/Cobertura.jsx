@@ -2,6 +2,8 @@
 import React from 'react';
 import { TableIndex } from './CoberturaIndex';
 import { useFetch } from '../../Hooks/useFetch';
+import { Container, Paper, Grid, Typography } from '@material-ui/core';
+import { Alert } from '@material-ui/lab';
 
 export const Cobertura = () => {
 
@@ -13,28 +15,28 @@ export const Cobertura = () => {
   const { loading, data } = useFetch('/v3/routes/coverages/all', jsonValue);
 
   return (
-    <div className="container">
-      <div className="row my-3">
-        <div className="col-lg-12">
-          <h1 className="text-center">Listado de  Coberturas</h1>
+    <Paper>
+      <Container>
+        <Grid item lg={12}>
+        <Typography variant="h1">Listado de  Coberturas</Typography>
           <hr />
           {
             loading
-              ?
+            ?
               (
-                <div className="alert alert-info text-center" >
-                  Cargando...
-                </div>
+                <>
+                  <Alert severity="info">
+                      Cargando...
+                  </Alert>
+                  <br/>
+                </>
               )
               :
-              (
-                <TableIndex data={data} />
-              )
+              (<TableIndex data={data} />)
           }
-        </div>
-      </div>
-
-    </div>
+        </Grid>
+      </Container>
+    </Paper>
   )
 }
 

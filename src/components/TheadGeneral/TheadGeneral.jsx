@@ -1,17 +1,17 @@
 import React from 'react'
-
+import { TableHead , TableRow, TableCell } from '@material-ui/core'
 export const TheadGeneral = (props) => {
     return (
-        <thead>
-          <tr>
+        <TableHead>
+          <TableRow>
             {
                 props.thead.map( (thead, index) => {
                     return (
-                        <th key={index}>{thead}</th>
+                        <TableCell key={index}>{thead}</TableCell>
                     )
                 })
             }
-          </tr>
-        </thead>
+          </TableRow>
+        </TableHead>
     )
 }

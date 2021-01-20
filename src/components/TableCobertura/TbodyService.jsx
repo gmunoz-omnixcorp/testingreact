@@ -1,21 +1,22 @@
 import React from 'react'
+import {TableRow, TableCell, Typography } from '@material-ui/core';
 
 export const TbodyService = (props) => {
     return (
-        <tr>
-            <td>{props.data.id}</td>
-            <td>{props.data.routeId}</td>
-            <td>{props.data.courierId}</td>
-            <td>
+        <TableRow>
+            <TableCell>{props.data.id}</TableCell>
+            <TableCell>{props.data.routeId}</TableCell>
+            <TableCell>{props.data.courierId}</TableCell>
+            <TableCell>
             {
                 props.data.shippingType.map((shipping, index) => {
                 return (
-                    <span key={index}>{shipping} </span>
+                    <Typography variant="body2" key={index}>{shipping} </Typography>
                 )
                 })
             }
-            </td>
-            <td>{props.data.status ? 'Activo':'No Activo'}</td>
-        </tr>
+            </TableCell>
+            <TableCell>{props.data.status ? 'Activo':'No Activo'}</TableCell>
+        </TableRow>
     )
 }
