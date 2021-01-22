@@ -10,7 +10,7 @@ import Grid from '@material-ui/core/Grid';
 export const AppRouter = () => {
 
     return (
-        <Grid  container>
+        <Grid  container className="h-100">
             <Grid item lg={2}>
                 <NavBar />
             </Grid>
